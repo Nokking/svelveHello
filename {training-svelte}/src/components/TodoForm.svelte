@@ -1,5 +1,6 @@
 <script>
     import { todos } from '../stores/todo'
+    
 
     let text = ''
     let errorMessage = ''
