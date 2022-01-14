@@ -33,7 +33,7 @@
         on:changeCurrentStatus={changeCurrentStatus}
         current={current}/>
         <ul class="main_contents_list">
-            {#if resultTodoArr,length === 0}
+            {#if resultTodoArr.length === 0}
                 <p class="main_contents_zerocase">0 items.</p>
             {:else}
                 {#each resultTodoArr as todo}
@@ -43,7 +43,7 @@
                             {todo.text}
                         </p>
                         <button
-                            on:click={validDoneFlag(todo,id)}
+                            on:click={validDoneFlag(todo.id)}
                             style={ todo.isDone ? 'background-color: #C7C7C7' : '' }
                             disabled={todo.isDone}
                             class="main_contents_list_item_button">
